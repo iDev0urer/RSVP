@@ -33,7 +33,7 @@ class EventsController < ApplicationController
 
     receptions.each do |reception|
       user = current_user.id
-      reception = view_context.hashids_decode(reception)
+      reception = view_context.hashids_decode(reception).to_i
       Rsvp.create(user_id: user, reception_id: reception, party_size: 1)
     end
 
