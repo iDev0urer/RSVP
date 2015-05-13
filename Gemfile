@@ -61,6 +61,8 @@ gem 'geocoder'
 gem 'hashids'
 gem 'activeadmin', github: 'activeadmin'
 
+gem 'puma'
+
 gem 'rails_12factor'
 
 group :development do
@@ -72,7 +74,6 @@ group :development do
 end
 
 group :development, :test do
-  gem 'passenger'
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rubocop'
@@ -80,7 +81,6 @@ group :development, :test do
 end
 
 group :production do
-  gem 'puma'
   gem 'pg'
 end
 
