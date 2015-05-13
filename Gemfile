@@ -61,6 +61,8 @@ gem 'geocoder'
 gem 'hashids'
 gem 'activeadmin', github: 'activeadmin'
 
+gem 'rails_12factor'
+
 group :development do
   gem 'better_errors'
   gem 'hub', :require=>nil
@@ -80,6 +82,5 @@ end
 group :production do
   gem 'puma'
   gem 'pg'
-  gem 'rails_12factor'
 end
 

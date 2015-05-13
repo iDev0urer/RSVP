@@ -1,12 +1,12 @@
 module ApplicationHelper
 
   def hashids_encode(text)
-    hashids = Hashids.new(ENV['hashids_salt'])
+    hashids = Hashids.new(ENV['hashids_salt'].to_s)
     hashids.encode(text)
   end
 
   def hashids_decode(text)
-    hashids = Hashids.new(ENV['hashids_salt'])
+    hashids = Hashids.new(ENV['hashids_salt'].to_s)
     hashids.decode(text)
   end
 
