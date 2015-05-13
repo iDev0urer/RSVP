@@ -1,0 +1,31 @@
+.wedding-description {
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.reception-list {
+  h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+  }
+  
+  .wedding--reception-listing, .wedding--reception-heading {
+    margin: 10px auto;
+  }
+
+}
+
+#map-container {
+  height: 400px;
+  border-radius: 16px 16px;
+  border-color: #fff;
+  border-style: solid;
+  box-shadow: 2px 2px 10px #B1B1B1;
+  margin-top: 25px;
+  border-width: 7px;
+  margin: 40px auto;
+}
+#map-canvas {
+  height: 384px;
+  width: 100%;
+}

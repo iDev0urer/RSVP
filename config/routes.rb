@@ -1,56 +1,21 @@
 Rails.application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
 
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+  root 'pages#index'
 
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  get '/events', to: 'events#index'
+  get '/events/create', to: 'events#index', as: 'new_event'
 
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
+  get '/events/create/wedding/', to: 'events#wedding_new', as: 'new_wedding'
 
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
+  match 'e/rsvp', to: 'events#rsvp_new', as: 'new_rsvp', via: [:post, :get]
+  get 'e/:event_slug', to: 'events#show', as: 'show_event'
 
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
+  get 'my_events', to: 'events#show_user_events', as: 'user_events'
 
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
 
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
 end

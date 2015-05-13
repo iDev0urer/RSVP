@@ -44,13 +44,23 @@ group :development, :test do
   gem 'spring'
 end
 
-
-gem 'bootstrap-sass'
 gem 'devise'
+gem 'omniauth-facebook'
+
 gem 'figaro', '>= 1.0.0.rc1'
 gem 'mysql2'
 gem 'simple_form'
-gem 'upmin-admin'
+gem 'google-webfonts-rails'
+gem 'gmaps4rails'
+gem 'underscore-rails'
+gem 'chronic'
+gem 'redcarpet'
+
+gem 'active_record-acts_as'
+gem 'cocoon'
+gem 'geocoder'
+gem 'hashids'
+gem 'activeadmin', github: 'activeadmin'
 
 group :development do
   gem 'better_errors'

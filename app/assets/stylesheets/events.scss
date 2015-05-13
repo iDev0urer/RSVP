@@ -1,0 +1,32 @@
+// Place all the styles related to the events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.event-img {
+
+  figure {
+    margin: 6px;
+    position: relative;
+    overflow: hidden;
+    border: 4px solid #f0f0f0;
+
+    img {
+      display: block;
+      position: relative;
+      width: 250px;
+    }
+
+    figcaption {
+      display: none;
+      position: absolute;
+      padding: 20px;
+      background: #2c3f52;
+      color: #ed4e6e;
+      height: 100px;
+      width: 100%;
+      top: auto;
+      bottom: 0;
+
+    }
+  }
+}
