@@ -48,7 +48,6 @@ gem 'devise'
 gem 'omniauth-facebook'
 
 gem 'figaro', '>= 1.0.0.rc1'
-gem 'mysql2'
 gem 'simple_form'
 gem 'google-webfonts-rails'
 gem 'gmaps4rails'
@@ -75,9 +74,11 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rubocop'
+  gem 'sqlite3'
 end
 
 group :production do
   gem 'puma'
+  gem 'pg'
 end
 
